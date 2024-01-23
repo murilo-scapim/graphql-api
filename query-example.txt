@@ -1,0 +1,16 @@
+query ExampleQuery {
+  autores {
+    id
+    nome
+    livros {
+      titulo
+    }
+  }
+}
+
+query ListarAutor {
+  listarAutor(id: 1) {
+    id,
+    nome
+  }
+}
