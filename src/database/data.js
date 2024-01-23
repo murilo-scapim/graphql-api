@@ -20,7 +20,7 @@ const autores = [
         ano_publicacao: "2020"
       }
    ]
-  }
+  },
 ]
 
 module.exports = {

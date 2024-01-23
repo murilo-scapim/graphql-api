@@ -14,9 +14,24 @@ const typeDefs = gql`
     ano_publicacao: Int!
   }
 
+  input LivroInput {
+    id: ID!
+    titulo: String!
+    ano_publicacao: Int!
+  }
+
+  input AutorInput {
+    nome: String!
+    livros: [LivroInput]!
+  }
+
   type Query {
     listarAutores: [Autor]
     listarAutor(id: ID!): Autor
+  }
+
+  type Mutation {
+    criarAutor(autor: AutorInput): Autor
   }
 `;
 

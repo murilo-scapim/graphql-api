@@ -7,6 +7,19 @@ const resolvers = {
       const { id } = args;
       return autores.find(autor => autor.id === id);
     }
+  },
+  Mutation: {
+    criarAutor(_, args) {
+      const { autor } = args;
+      const { nome, livros } = autor;
+      const novoAutor = {
+        id: autores.length + 1,
+        nome,
+        livros
+      };
+      autores.push(novoAutor);
+      return novoAutor;
+    }
   }
 };
 
